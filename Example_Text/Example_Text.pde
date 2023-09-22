@@ -1,11 +1,11 @@
 //Global Variables
 int appWidth, appHeight;
-String title, footer;
+String title = "WAHOO", Footer="drip";
 PFont titleFont, footerFont;
-color red = #FC1414, resetDefaultInk;
-int sizeFont;
+color red = #FC1414, resetDefaultInk, yellow = #FFF705;
+int sizeFont, size;
 float xTitle, yTitle, widthTitle, heightTitle;
-float   xFooter, yFooter, widthFooter, heightFooter;
+float  footer, xFooter, yFooter, widthFooter, heightFooter;
 //
 void setup() {
   //fullScreen(); //displayWidth & displayHeight
@@ -25,8 +25,8 @@ void setup() {
   //
   //DIVs or rect()
   //Layoutnour text space and typographical features
-  // rect(xTitle, yTitle, widthTitle, heightTitle ); //Title: WAHOO!!
-  //rect(  xFooter, yFooter, widthFooter, heightFooter ); 
+  rect(xTitle, yTitle, widthTitle, heightTitle ); //Title: WAHOO!!
+  rect(  xFooter, yFooter, widthFooter, heightFooter ); 
   //
   // Text Setup
   // Fonts from OS (Operating System)
@@ -41,13 +41,19 @@ void draw() {
   //Text is same size or relative to rect()
   //
   //Drawing Font Code
-  fill(red);
+  fill(red); //ink
   textAlign(CENTER, CENTER);
-  size = 10;
-  textFont(titlefont, size);
-  text ();
+  size = 30;
+  textFont(titleFont, size);
+  text(xTitle, yTitle, widthTitle, heightTitle);
+  textFont(footerFont, size);
+  fill(yellow); //ink
+  textAlign(CENTER, TOP);
+  text ( Footer, xFooter, yFooter, widthFooter, heightFooter);
+  fill(resetDefaultInk); //ink
   //
- // rect(xTitle, yTitle, widthTitle, heightTitle ); //Title: WAHOO!!
+  //
+ // rect( ); //Title:
   //rect(  xFooter, yFooter, widthFooter, heightFooter ); //Footer: drip
 } //End draw
 //
